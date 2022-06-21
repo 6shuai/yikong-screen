@@ -1,0 +1,130 @@
+.main{
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+.xfj-screen, .cut-in-advertising{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: none;
+    overflow: hidden;
+}
+.cut-in-advertising{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#000;
+    z-index: 99999;
+}
+.next-stage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.screen-item{
+    position: absolute;
+    display: inline-block;
+}
+.screen-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.live-wrap{
+    width: 100%;
+    height: 100%;
+}
+.screen-item img, .screen-item video, .screen-item .live-video{
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+    position: absolute;
+    z-index: 9999;
+}
+
+.screen-item img.next-img{
+    z-index: 9990;
+}
+
+.screen-item .iframe-wrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: rgba(#000, #000, #000, 0);
+}
+
+
+#xfj-update{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    margin-top: 0;
+    display: none;
+    background: -webkit-radial-gradient(0 100%,ellipse cover,rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),linear-gradient(180deg,rgba(57,173,219,.25) 0,rgba(42,60,87,.4)),linear-gradient(135deg,#670d10,#092756);
+}
+#xfj-update .center{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -50px;
+}
+#xfj-update h3{
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+#xfj-update .progress-wrap{
+    width: 90%;
+    height: 30px;
+    margin: 0 5%;
+    background-color: #ddd;
+}
+#xfj-update #xfj-progress{
+    width: 1%;
+    background-color: #4caf50;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    color: #fff;
+}
+
+.downloading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%);
+    color: #fff;
+}
+
+.downloading>img{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    animation:turn 1s linear infinite;  
+}
+
+.downloading>p{
+    line-height: 40px;
+}
+
+@keyframes turn{
+  0%{-webkit-transform:rotate(0deg);}
+  25%{-webkit-transform:rotate(90deg);}
+  50%{-webkit-transform:rotate(180deg);}
+  75%{-webkit-transform:rotate(270deg);}
+  100%{-webkit-transform:rotate(360deg);}
+}
